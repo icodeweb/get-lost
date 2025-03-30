@@ -14,26 +14,43 @@ body {
     width: 10000px;
     height: 10000px;
     background-image: url(assets/imgs/riverBG.png);
+    background-size: cover;
 }
 
 .map {
-    width: 250px;
-    height: 150px;
     border: 3px solid blue;
     position: fixed;
     right: 10px;
     bottom: 10px;
     background-color: azure;
+    z-index: 2;
+    overflow: hidden;
 }
 
 .location {
+    font-size: 20px;
+    color: red;
+    border: 1px dashed red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 50%; */
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.center {
     width: 20px;
     height: 20px;
     font-size: 20px;
     color: red;
+    border: 1px dashed red;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
-    border-radius: 50%;
+    /* border-radius: 50%; */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
