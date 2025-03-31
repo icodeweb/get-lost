@@ -17,7 +17,7 @@ body {
     background-size: cover;
 }
 
-.map {
+/* .map {
     border: 3px solid blue;
     position: fixed;
     right: 10px;
@@ -34,9 +34,85 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border-radius: 50%; */
-    position: absolute;
+position: absolute;
+transform: translate(-50%, -50%);
+}
+
+*/
+/* .center {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    color: red;
+    border: 1px dashed red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.map {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.location {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.5);
+    border: 2px solid red;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+ */
+
+
+/* 
+* {
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.maincontainer {
+    width: 10000px;
+    height: 10000px;
+    background-image: url(assets/imgs/riverBG.png);
+    background-size: cover;
+}
+
+.map {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    z-index: 100;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.location {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.3);
+    border: 2px solid red;
+    pointer-events: none;
+    box-sizing: border-box;
 }
 
 .center {
@@ -48,9 +124,73 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border-radius: 50%; */
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
+} */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    overflow: scroll;
+    height: 100vh;
+    width: 100vw;
+}
+
+.maincontainer {
+    width: 10000px;
+    height: 10000px;
+    background-color: #333;
+    /* Fallback color */
+    background-image: url('assets/imgs/riverBG.png');
+    background-size: cover;
+    position: relative;
+
+}
+
+.map {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 200px;
+    /* Initial size, will be overwritten by JS */
+    height: 200px;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    z-index: 100;
+    background-size: 10000px 10000px;
+    background-image: inherit;
+}
+
+.location {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.3);
+    border: 2px solid red;
+    pointer-events: none;
+}
+
+.center {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: 20px;
+    pointer-events: none;
+    z-index: 10;
 }
